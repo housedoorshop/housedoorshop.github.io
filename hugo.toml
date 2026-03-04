@@ -1,0 +1,91 @@
+baseURL = "https://housedoorshop.github.io/"
+languageCode = "ko-kr"
+title = "housedoorshop 쇼핑 블로그"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+summaryLength = 35
+
+[pagination]
+pagerSize = 12
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
+
+[minify]
+disableXML = false
+minifyOutput = true
+
+[sitemap]
+changefreq = "daily"
+priority = 0.7
+filename = "sitemap.xml"
+
+[permalinks]
+posts = "/posts/:slug/"
+
+[params]
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowShareButtons = true
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowToc = true
+TocOpen = false
+env = "production"
+description = "거실, 침실, 주방 등 집 안 모든 공간을 감각적으로 꾸밀 수 있는 인테리어 소품 및 가구 전문 쇼핑 블로그입니다. 최신 트렌드를 반영한 홈 데코 아이템을 매일 큐레이션합니다"
+keywords = ["인테리어소품쇼핑", "가구추천", "홈데코소품", "조명쇼핑", "인테리어트렌드"]
+images = ["/images/og-default.webp"]
+
+# Search engine verification (set only when needed)
+googleSiteVerification = ""
+naverSiteVerification = ""
+bingSiteVerification = ""
+yandexSiteVerification = ""
+
+[params.homeInfoParams]
+Title = "트렌디한 인테리어 소품과 가구, 하우스도어 홈데코 쇼핑"
+Content = "집 안 분위기를 새롭게 바꾸고 싶으신가요? 하우스도어에서는 거실, 침실, 주방 등 공간별 인테리어를 완성시켜줄 감각적인 소품과 가구를 매일 소개합니다. 분위기를 살려주는 무드 조명, 포인트가 되는 벽 장식, 실용적이면서도 세련된 가구까지 당신의 공간을 트렌디하게 변신시켜줄 제품들을 지금 바로 만나보세요."
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.4
+minMatchCharLength = 2
+keys = ["title", "permalink", "summary", "content"]
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 5
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 30
